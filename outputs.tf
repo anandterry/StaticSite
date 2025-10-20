@@ -1,4 +1,9 @@
 output "website_url" {
-  value = aws_s3_bucket.static_site.website_endpoint
+  value = "http://${google_storage_bucket.static_site.name}.storage.googleapis.com/index.html"
 }
+
+output "static_site_url" {
+  value = "http://storage.googleapis.com/${google_storage_bucket.static_site.name}/index.html"
+}
+
 

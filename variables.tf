@@ -1,8 +1,15 @@
-variable "aws_region" {
-  default = "us-east-1"
+variable "project_id" {
+  description = "Your GCP project ID"
+  type        = string
+}
+
+variable "region" {
+  description = "GCP region for bucket"
+  default     = "us-central1"
 }
 
 variable "bucket_name" {
-  default = "anand-static-site"
+  description = "Globally unique bucket name"
+  type        = string
 }
 
